@@ -1,0 +1,31 @@
+{
+  "raw_dir": "DATA_ROOT\\MI-20260822T165808Z-1-001\\MI\\MI CSV",
+  "labels_csv": "DATA_ROOT\\labels.csv",
+  "channels": [
+    "FZ",
+    "C3",
+    "CZ",
+    "C4"
+  ],
+  "fs": 250.0,
+  "bandpass_hz": [
+    0.5,
+    40.0
+  ],
+  "bandpass_order": 4,
+  "notch_freq_hz": 50.0,
+  "notch_q": 30.0,
+  "artifact_reject_k_mad": 5.0,
+  "apply_car": true,
+  "epoch_window_s": [
+    0.5,
+    3.5
+  ],
+  "baseline_window_s": [
+    0.0,
+    0.5
+  ],
+  "normalize_default_on": false,
+  "random_seed": 42,
+  "output_dir": "outputs"
+}

@@ -1,0 +1,17 @@
+{
+  "method": "Bandpass(8-30Hz) + CSP (mne) + SVM  [fully self-contained pipeline]",
+  "cv_balanced_accuracy": 0.5166666666666667,
+  "best_params": {
+    "csp__n_components": 4,
+    "svm__C": 100,
+    "svm__kernel": "rbf"
+  },
+  "test_accuracy": 0.49876543209876545,
+  "test_balanced_accuracy": 0.49859776618055895,
+  "test_f1": 0.46153846153846156,
+  "test_roc_auc": 0.5,
+  "n_train": 1616,
+  "n_test": 405,
+  "note_for_deployment": "This model expects RAW (unfiltered) epoched trials as input, shape (n_trials, n_channels, n_time). Bandpass filtering (8-30Hz) is applied automatically inside the pipeline \u2014 do NOT pre-filter before calling .predict().",
+  "conclusion": "Model performs at chance level (AUC=0.5, single-trial confidence exactly 50/50). Likely cause: unverified label-to-file mapping flagged in Data Processing notebook (240 extra rows in labels.csv)."
+}
